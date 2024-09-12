@@ -1,0 +1,25 @@
+1.INICIA
+if(session_status != PHP_SESSION_ACTIVE)
+{
+    session_cache_expire(60); //minutos
+     session_start(); 
+}
+
+2.GRAVA
+
+$_SESSION['chave'] = 'valor';
+$_SESSION['nome_usuario'] = 'Ian';
+$_SESSION['usuario'] = 
+                    array("nome"=>"Ian",
+                    "email"=>"ian@gmail.com",
+                    "telefone"=>"18935004020");
+3.LER VALOR
+echo $_SESSION['nome_usuario'];
+
+4.LIMPAR
+
+session_unset();
+
+5.DESTRUIR
+
+session_destroy();
